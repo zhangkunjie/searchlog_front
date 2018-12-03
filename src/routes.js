@@ -3,7 +3,7 @@ import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
-import Report from './views/nav1/Report.vue'
+import Article from './views/nav1/Article.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
 import Page4 from './views/nav2/Page4.vue'
@@ -32,12 +32,13 @@ let routes = [
         iconCls: 'fa fa-bar-chart',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/', component: Report, name: '文章来源' },
-            { path: '/form', component: Form, name: '优质库' },
-            { path: '/user', component: user, name: '历史库' },
+            { path: '/article', component: Article, name: '文章来源' }
+            //{ path: '/form', component: Form, name: '优质库' },
+            //{ path: '/user', component: user, name: '历史库' },
         ]
-    },
+    }
     //{ path: '/main', component: Main },
+    /*
     {
         path: '/',
         component: Home,
@@ -83,7 +84,7 @@ let routes = [
         path: '*',
         hidden: true,
         redirect: { path: '/404' }
-    }
+    }*/
 ];
 
 export default routes;
